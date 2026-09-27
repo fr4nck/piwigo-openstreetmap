@@ -14,11 +14,11 @@ function osm_ws_images_setInfo($res, $methodName, $params) {
     return $res;
   }
 
-  if (empty($params['latitude'])) {
+  if (!isset($params['latitude']) || $params['latitude'] === '') {
     return $res;
   }
 
-  if (empty($params['longitude'])) {
+  if (!isset($params['longitude']) || $params['longitude'] === '') {
     return $res;
   }
   
